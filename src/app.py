@@ -3,6 +3,7 @@ import plotly.express as px
 import dash
 from dash import dcc
 from dash import html
+from dash import dash_table
 # Load data into a Pandas DataFrame
 df = pd.read_csv("../data/processed_data.csv")
 
@@ -22,15 +23,16 @@ bar_layout = html.Div(children=[
 
 # Define the map layout
 map_layout = html.Div(children=[
-    html.H2(children='Cost of Living by Country'),
+    html.H2(children='Cost of Living'),
     dcc.Graph(id='map-graph', style={'height': '100vh'})
 ])
 
 # Define the scatter layout
 scatter_layout = html.Div(children=[
-    html.H2(children='Scatter plot'),
+    html.H2(children='Cost of living Index versus Local Purchasing Power Index'),
     dcc.Graph(id='scatter-graph', figure=fig)
 ])
+
 
 
 
@@ -53,6 +55,8 @@ app.layout = html.Div([
         dcc.Tab(label='Scatter Chart', value='tab-3', children=[scatter_layout])
         
     ])
+
+    
     
 ])
 
@@ -82,14 +86,18 @@ def update_map(continent):
         filtered_df,
         lat='latitude',
         lon='longitude',
-        hover_name='Groceries Index',
+        hover_name='Cost of Living Index',
         size='Rent Index',
         color='Continent',
         zoom=2,
-        title=f"Details of countries in {continent}"
+        title=f"Cost of Living in {continent}"
     )
     fig.update_layout(mapbox_style="open-street-map")
     return fig
+
+
+
+
 # Run the app
 if __name__ == '__main__':
     app.run_server(debug=True)
