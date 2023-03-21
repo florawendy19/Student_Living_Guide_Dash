@@ -19,7 +19,8 @@ With this app, they will be able to:
 #.View 3 Tabs  which are labelled:
 
 * Map: This tab shows a map which shows the Cost of Living per country based on the selected continent. The cost of living varies depending on the size of the circle. The bigger the circle, the higher the cost of living. It also hovers the continent name, the rent index and the latitude and longitude.
-![1_filter](img/img1.png)
+
+![1_filter](img/im1.png)
 
 
 * Bar chart: This tab shows a stacked bar chart of the cost of living index, rent index, groceries index, restaurant price index per country based on the selected continent.
