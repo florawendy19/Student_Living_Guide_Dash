@@ -1,6 +1,8 @@
 
 # Student Living Guide Dash App
 
+Click [here]() to see the live application on render.com
+
 The Student Living Guide is a data visualization dashboard app (built on Dash) displaying crucial information about cost of Living indexes of different countries and continents. The data at hand gives the cost of living indexes compared to New York. Therefore, this app is made for any student or anybody in New York city wishing to explore other parts of the world for academic or any other purpose. 
 
 ## Proposal
