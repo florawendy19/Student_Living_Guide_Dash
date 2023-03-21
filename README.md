@@ -1,75 +1,43 @@
 
 # Student Living Guide Dash App
 
-The Student Living Guide is a data visualization dashboard app (built on Dash) displaying crucial information about cost of Living indexes of countries and continents. This app is made for any student or anybody in New York city wishing to explore other parts of the world. It will give them support in deciding where to go depending on their bidget. 
+The Student Living Guide is a data visualization dashboard app (built on Dash) displaying crucial information about cost of Living indexes of different countries and continents. The data at hand gives the cost of living indexes compared to New York. Therefore, this app is made for any student or anybody in New York city wishing to explore other parts of the world for academic or any other purpose. 
 
-## Table of Contents
+## Proposal
 
-  - [The App](#the-app)
-  - [Motivation and Purpose](#https://github.com/UBC-MDS/Student_Living_Guide/blob/main/reports/proposal.md)
-  - [Dashboard description](#dashboard-description)
-  - [App Design](#app-design)
-  - [If you want to help further develop the app](#if-you-want-to-help-further-develop-the-app)
-  - [Contributing](#contributing)
-  - [App Contributors](#app-contributors)
-  - [License](#license)
+Thanks to this app, the targeted audience mentioned above, will be able to support the target audience detailed on this [proposal](https://github.com/UBC-MDS/Student_Living_Guide/blob/main/reports/proposal.md) to view and compare indexes attributes about countries such as Rent index, Groceries index, Cost of Living index, to make their choices on which country to go based on their budget.
 
-## The App
+You can read more about the proposal proposal [here](https://github.com/UBC-MDS/Student_Living_Guide/blob/main/reports/proposal.md). 
 
-You can access the dashboard app here: [Student Living App](https://spotify-explorer-pop.herokuapp.com/)
+### App description:
 
-## Motivation and Purpose
+Student Living Guide Dash App is an app as mentionned above which helps New York based students and residents in general to compare the cost of living of countries. 
+With this app, they will be able to:
 
-Click [here ](#https://github.com/UBC-MDS/Student_Living_Guide/blob/main/reports/proposal.md) to read the full proposal of the project.
+#. Have a dropdown with all the  different continents in the dataset.
 
-As international students, the main question that we all asked ourselves before moving to Vancouver was: How affordable is Vancouver city? How affordable a country or a city is, is indeed the biggest factor when it comes to choosing the country or city where one wants to pursue their studies. Many students, therefore, browse hundreds of websites to find indicators of the cost of living in the country or the city they plan to go to. However, this process can be exhaustive because the information about the cost of living is spread across different websites and the search results often contradict. How can we be sure that this process of comparing cities/countries based on the cost of living is less exhaustive for students and potentially yields reliable results? This is the question that our application `Student_Living_Guide` aims to address.
+#.View 3 Tabs  which are labelled:
 
-### User Persona
-
-Quan is a 22-years old student pursuing an undergraduate degree in Neuroscience at New York University (NYU). After completing his freshman year at NYU, Quan is considering several student exchange programs abroad from his entire Sophomore year. Quan is hesitating between four countries which are: France, South Africa, India, and China. Aware that his one-year budget is limited, Quan decides to use the application `Student_Living_Guide` in order to make a choice that matches his budget. Through the `Student_Living_Guide` application, Quan will be able to interactively select those four countries and compare attributes such as rent/month, and groceries index.
-
-The cost-of-living data on which the application `Student_Living_Guide` is based on New York as a reference point, therefore, the target market for our application is any student living in New York and who is considering other countries to pursue their studies. The `Student_Living_Guide` will guide them in making a more informed decision about the country they wish to pursue their studies.
-
-### Usage
-
-With the Student Living guide, student in New York desiring to pursue their studies elsewhere will be able to find the necessary information to comparing the living cost of any place with New York. Indeed, the can select any country from the list of countries to view the Cost of living displayed through the aid of a map as well as a density plot. Lastly, students can also select any two indices they wish to check the correlation which will be displayed in a scatter plot.
-
-## Research questions and usage scenarios
-
-Through our application, students in the shoes of our fictional character Quan will be able to answer the following questions:
-
-- Which country has the highest cost of living?
-
-- Which country has the lowest cost of living?
-
-- What is the correlation between different indexes? For example, what is the correlation between the Groceries Index and Restaurant Price Index?
-
-- Which country has the closest living cost compared to New York?
-
-## Dashboard description
-
-The app contains 3 tabs that shows a map, a stacked bar plot and a scatter chart
-options for the plots.
-
-- **Map** <br>
-
-- **Stacked bar chart** <br>
-
-- **Scatter chart** <br>
+* Map: This tab shows a map which shows the Cost of Living per country based on the selected continent. The cost of living varies depending on the size of the circle. The bigger the circle, the higher the cost of living. It also hovers the continent name, the rent index and the latitude and longitude.
+![1_filter](img/img1.png)
 
 
-## App Design
+* Bar chart: This tab shows a stacked bar chart of the cost of living index, rent index, groceries index, restaurant price index per country based on the selected continent.
+![1_filter](img/img2.png)
 
-<img width="919" src="./img/py-demo.gif">
+* Scatter plot: This is tab shows a scatter plot of the  cost of living versus the local purchase power index.
+![1_filter](img/img3.png)
 
-## If you want to help further develop the app
 
-1. Fork [the repository](https://github.com/UBC-MDS/spotify-explorer-py/)
+## App Usage
+
+1. Fork [the repository](https://github.com/florawendy19/Student_living_guide_dash/)
+
 2. Set up conda environment as follows
 
 ```bash
-conda env create -f student_guide.yml
-conda activate student_guide
+conda env create -f env.yaml
+conda activate dash
 ```
 
 3. To run the app locally, run the following command from the root of this repository
@@ -78,11 +46,12 @@ conda activate student_guide
 python src/app.py
 ```
 
-4. Create an issue on this repo to inform the owner about the changes/improvements you want to make. See **Contributing** section below for more details.
+4. Create an issue on this repo to inform the owner about the changes/improvements you want to make. See below how to contribute to this project.
 
 ## Contributing
 
-Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a [Code of Conduct](/CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
+Interested in contributing? Check out the contributing guidelines [here](https://github.com/florawendy19/Student_living_guide_dash/blob/main/CONTRIBUTING.md).
+Please note that this project is released with a [Code of Conduct](https://github.com/florawendy19/Student_living_guide_dash/blob/main/CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
 
 ## App Contributors
 
@@ -90,4 +59,4 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`Student_living_guide_dash` was created by Flora Ouedraogo. It is licensed under the terms of the [MIT License](main/LICENSE).
+`Student_living_guide_dash` was created by Flora Ouedraogo. It is licensed under the terms of the [MIT License](https://github.com/florawendy19/Student_living_guide_dash/blob/main/LICENSE).
