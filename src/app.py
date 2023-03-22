@@ -5,7 +5,7 @@ from dash import dcc
 from dash import html
 from dash import dash_table
 # Load data into a Pandas DataFrame
-df = pd.read_csv("../data/processed_data.csv")
+df = pd.read_csv("data/processed_data.csv")
 
 fig = px.scatter(df, x="Cost of Living Index", y="Local Purchasing Power Index",
                  size="Groceries Index", color="Continent", hover_name="Country",
